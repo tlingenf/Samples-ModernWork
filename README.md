@@ -4,3 +4,9 @@ This sample code, scripts, and other resources are not supported under any Micro
 # Samples-ModernWork
 A collection of sample scripts, processes, documentation, and other material related to modern work solutions built on Microsoft 365 services.
 
+## SharePoint
+
+### CreateTeamAtUrl
+[SharePoint/CreateTeamAtUrl](https://github.com/tlingenf/Samples-ModernWork/SharePoint/CreateTeamAtUrl)
+
+This sample demonstrates how to create a Microsoft Team and how to specify the URL of the associated SharePoint site and the alias of the Exchange mailbox.
