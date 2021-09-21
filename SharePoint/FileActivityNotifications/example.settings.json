@@ -1,0 +1,20 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "FUNCTIONS_EXTENSION_VERSION": "~3",
+    "WEBSITE_NODE_DEFAULT_VERSION": "~14",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "",
+    "WEBSITE_CONTENTSHARE": "",
+    "ClientId": "",
+    "TenantId": "",
+    "ClientSecret": "",
+    "AadEndpoint": "https://login.microsoftonline.com/",
+    "WebhookNotificationUrl": "",
+    "FileOperations": "FilePreviewed,FileModified,FileAccessed,FileUploaded,FileAccessedExtended,FileDownloaded,FileRenamed,FileDeleted,FileCopied",
+    "FromMailbox": "",
+    "SiteUrlRegex": "^https://tenant.sharepoint.com/sites/secure-.*$",
+    "NotificationAddress": ""
+  }
+}
