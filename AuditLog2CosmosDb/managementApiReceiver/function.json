@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "readytoprocessblobs",
+      "connection": "AzureWebJobsStorage"
+    }
+  ],
+  "scriptFile": "../dist/managementApiReceiver/index.js"
+}
