@@ -4,7 +4,7 @@
 
 This sample Power App demonstrates how you can build advanced table scenarios using galleries in canvas apps.
 
-## Navigating and Re-Ording
+## Navigating and Re-Ordering
 
 The **Navigate Rows** demo provides an example for how you can:
 - select rows of a gallery and have buttons to navigate fowards or backwards through the gallery items
