@@ -1,0 +1,14 @@
+{
+    "$schema": "schema.json",
+    "actions": [
+       {
+        "verb": "triggerFlow",
+        "url": "{flow-anonymous-url}",
+        "name": "Site Template | On Associated Site",
+        "parameters": {}
+      }
+    ],
+    "bindata": {},
+    "version": 1
+  }
+  
