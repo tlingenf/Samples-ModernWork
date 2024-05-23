@@ -23,8 +23,8 @@ if ($QueueItem.TemplateName -eq $null) {
 # connect to directory site to download template
 try {
     Write-Host "Retrieving template $($QueueItem.TemplateName) from directory"
-    Connect-PnPOnline -Url "https://{tenant}.sharepoint.com/sites/{site-url}" -ManagedIdentity
-    $pnpFile = Get-PnPFile -Url "/sites/{site-url}/{lib-name}/$($QueueItem.TemplateName)" -AsString
+    Connect-PnPOnline -Url $env:TemplateSiteUrl -ManagedIdentity
+    $pnpFile = Get-PnPFile -Url ("{0}/{1}" -f $env:TemplateFolderPath, $($QueueItem.TemplateName)) -AsString
 
     Write-Host "Applying template to $($QueueItem.SiteUrl) with $($QueueItem.TemplateName) bytes"
     Connect-PnPOnline -Url $QueueItem.SiteUrl -ManagedIdentity
