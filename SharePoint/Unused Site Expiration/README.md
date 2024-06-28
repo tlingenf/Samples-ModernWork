@@ -104,21 +104,14 @@ For more detailed instructions on importing Power Platform solutions, refer to t
 To enable the flows, you will need to follow these steps:
 
 1. Edit the recursive flows: Open the Power Platform portal and navigate to the flows that are used recursively. Edit each of these flows.
-
 2. Copy the "Call Child Flow" activities: Within each recursive flow, locate the "Call Child Flow" activities and copy them.
-
 3. Remove the "Call Child Flow" activities: After copying the "Call Child Flow" activities, remove them from the recursive flows.
-
 4. Save the flow: Save the changes made to the recursive flows.
-
 5. Go to the details page: Navigate to the details page of each recursive flow.
-
 6. Turn on the flow: On the details page, locate the option to turn on the flow and enable it.
-
-7. Edit the flow: After turning on the flow, go back to the flow editor and open the recursive flow again.
-
-8. Paste the copied "Run a Child Flow" action: Within the recursive flow, paste the previously copied "Run a Child Flow" action back into its original position.
-
-9. Turn on the other flows: Once you have completed the above steps for all the recursive flows, you can proceed to turn on the other flows in the Power Platform.
+7. Turn on the flow being called recursively.
+8. Edit the flow: After turning on the flow, go back to the flow editor and open the recursive flow again.
+9. Paste the copied "Run a Child Flow" action: Within the recursive flow, paste the previously copied "Run a Child Flow" action back into its original position.
+10. Turn on the other flows: Once you have completed the above steps for all the recursive flows, you can proceed to turn on the other flows in the Power Platform.
 
 By following these steps, you should be able to enable the flows in the Power Platform solution even if they are used recursively.
