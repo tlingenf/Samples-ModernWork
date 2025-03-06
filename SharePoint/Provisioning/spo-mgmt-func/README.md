@@ -4,7 +4,11 @@ This sample is losely based on the instructions found at https://learn.microsoft
 To deploy a Function App that can run the PnP provisioning engine from a SharePoint site template, follow these steps:
 1. Create a new Function App in the Azure portal using the PowerShell runtime stack and the consumption plan. Choose a name, resource group, region, and storage account for your Function App.
 2. Enable the system-assigned managed identity for the Function App under the Identity section. This will create a service principal that will be used to connect to SharePoint. 
-3. Grant the service principal the Sites.FullControl.All permission which will grant full control permission on all sites in the tenant. You can use the PnP PowerShell commands to do this, as shown in [Using PnP PowerShell in Azure Functions](https://pnp.github.io/powershell/articles/azurefunctions.html). You will need the object ID of the service principal, which you can find under the Identity section of the Function App.
+3. Grant the service principal the Sites.FullControl.All, User.ReadBasic.All, and GroupMember.Read.All  permissions which will grant full control permission on all sites in the tenant. You can use the PnP PowerShell commands to do this, as shown in [Using PnP PowerShell in Azure Functions](https://pnp.github.io/powershell/articles/azurefunctions.html). You will need the object ID of the service principal, which you can find under the Identity section of the Function App.
+``
+Example: 
+Add-PnPAzureADServicePrincipalAppRole -Principal "xxxxxxxxxxxxxxxxxxxxxx" -AppRole "User.ReadBasic.All" -BuiltInType MicrosoftGraph
+```
 4. Create a new queue named "applypnpsitetemplate" on the storage account associated with the Function App, you can use the Azure portal. Navigate to the storage account and go to the "Queues" section. Click on "Add queue" and enter "applypnpsitetemplate" as the queue name. Save the changes.
 5. You will need Visual Studio Code with the Azure Functions extension enabled on your machine. Open the project in VSCode and deploy to your new function app.
 6. A SharePoint site and a specific folder within its document library are required to store the PnP template files.
